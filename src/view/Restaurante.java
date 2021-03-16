@@ -11,9 +11,9 @@ public class Restaurante {
 		int permissoes = 1;
 		Semaphore semaforo = new Semaphore(permissoes);
 		
-		for (int idThread = 1; idThread < 6; idThread++)
+		for (int idPrato = 1; idPrato < 6; idPrato++)
 		{
-			Thread t = new Cozinha(idThread, semaforo);
+			Thread t = new Cozinha(idPrato, semaforo);
 			t.start();
 		}
 
